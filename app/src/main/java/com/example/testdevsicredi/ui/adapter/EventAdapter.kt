@@ -1,6 +1,8 @@
 package com.example.testdevsicredi.ui.adapter
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,11 +10,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.testdevsicredi.EventDetailsActivity
 import com.example.testdevsicredi.R
+import com.example.testdevsicredi.constants.TaskConstants
 import com.example.testdevsicredi.model.EventModel
 import java.text.NumberFormat
-import java.time.Instant
-import java.time.ZoneId
 import java.util.*
 
 
@@ -27,7 +29,9 @@ class EventAdapter(private val eventList: List<EventModel>) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         val item = eventList[position]
 
-        Glide.with(holder.itemView.context)
+        var context = holder.itemView.context;
+
+        Glide.with(context)
             .load(item.urlImage)
             .centerCrop()
             .placeholder(R.drawable.ic_baseline_texture_24)
@@ -45,8 +49,9 @@ class EventAdapter(private val eventList: List<EventModel>) : RecyclerView.Adapt
         holder.textDescription.setText(item.description)
 
         holder.itemView.setOnClickListener {
-            //Navigation.findNavController(holder.itemView).navigate(R.id.to_detalhes_fragment)
-            //holder.eventofragment.conteudo(currentItem)
+            val intent = Intent(context, EventDetailsActivity::class.java)
+            intent.putExtra(TaskConstants.KEY.EVENT,  item)
+            context.startActivity(intent)
         }
     }
 

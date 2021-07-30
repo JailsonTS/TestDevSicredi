@@ -21,21 +21,16 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
         val mEventsRepository = EventRepository(application)
         mEventsRepository.getEvents(object : APIListener<EventModel> {
             override fun onSuccess(result: EventModel, statusCode: Int) {
-                Toast.makeText(application, "EM PROCESSO 1", Toast.LENGTH_SHORT).show()
                 mEventList.value = null
-
             }
 
             override fun onFailure(message: String) {
-                Toast.makeText(application, "EM PROCESSO 2", Toast.LENGTH_SHORT).show()
                 mEventList.value = null
                 //mEventList.value = ValidationListener(message)
             }
 
             override fun onSuccess(result: List<EventModel>, statusCode: Int) {
-                Toast.makeText(application, "EM PROCESSO 3", Toast.LENGTH_SHORT).show()
                 mEventList.value = result
-
             }
 
         })

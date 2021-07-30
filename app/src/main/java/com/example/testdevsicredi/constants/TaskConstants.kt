@@ -6,4 +6,8 @@ class TaskConstants private constructor() {
         const val SUCCESS = 200
         const val BAD_REQUEST = 400
     }
+
+    object KEY {
+        val EVENT = "event"
+    }
 }

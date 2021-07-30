@@ -1,9 +1,10 @@
 package com.example.testdevsicredi.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
-class EventModel {
+class EventModel : Serializable{
 
     @SerializedName("id")
     var id =0;

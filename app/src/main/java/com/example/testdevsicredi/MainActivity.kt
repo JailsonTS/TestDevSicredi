@@ -33,8 +33,6 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.eventList.observe(this, Observer {
-            Log.i("log01", it.get(0).description.toString())
-
             val adapter = EventAdapter(it)
             rview_main.adapter = adapter
             rview_main.layoutManager = LinearLayoutManager(this)
