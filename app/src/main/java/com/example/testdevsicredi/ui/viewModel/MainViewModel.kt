@@ -21,12 +21,11 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
         val mEventsRepository = EventRepository(application)
         mEventsRepository.getEvents(object : APIListener<EventModel> {
             override fun onSuccess(result: EventModel, statusCode: Int) {
-                mEventList.value = null
+                mEventList.value = listOf()
             }
 
             override fun onFailure(message: String) {
-                mEventList.value = null
-                //mEventList.value = ValidationListener(message)
+                mEventList.value = listOf()
             }
 
             override fun onSuccess(result: List<EventModel>, statusCode: Int) {

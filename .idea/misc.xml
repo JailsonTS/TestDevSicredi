@@ -3,14 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19537037037037036" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/bordas.xml" value="0.2703125" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/bordas_edt.xml" value="0.2703125" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.19537037037037036" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_check_circle_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_image_not_found.xml" value="0.14074074074074075" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_image_not_supported_24.xml" value="0.19537037037037036" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2703125" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_map_24.xml" value="0.2703125" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_not_interested_24.xml" value="0.2703125" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.19537037037037036" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_texture_24.xml" value="0.19537037037037036" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19537037037037036" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/activity_event_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
-        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/card_item_list.xml" value="0.6" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/card_item_list.xml" value="0.1737704918032787" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/dialog_checkin.xml" value="0.13020833333333334" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/dialog_error.xml" value="0.25416666666666665" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/dialog_loading.xml" value="0.25416666666666665" />

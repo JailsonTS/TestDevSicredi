@@ -6,4 +6,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ERROR_UNEXPECTED">Conexão à internet necessária para uso da applicação.</string>
     <string name="NOT_CONNECTED">Não há conexão com a internet!</string>
+    <string name="titulo">Título</string>
+    <string name="big_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="generic_price">R$99,99</string>
+    <string name="generic_date_format">20/08/2018 13:00:00</string>
+    <string name="image">Image</string>
 </resources>

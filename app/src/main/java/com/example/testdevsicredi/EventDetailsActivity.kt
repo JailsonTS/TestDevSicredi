@@ -1,5 +1,6 @@
 package com.example.testdevsicredi
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,6 +30,7 @@ class EventDetailsActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewModel: EventDetailsViewModel
 
 
+    @SuppressLint("SimpleDateFormat")
     val formatter = java.text.SimpleDateFormat("dd/MM/yyyy HH:mm")
     val numberFormatter = NumberFormat.getCurrencyInstance()
 
@@ -48,14 +50,15 @@ class EventDetailsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setLayout() {
 
         Glide.with(this)
             .load(evento.urlImage)
             .centerCrop()
-            .placeholder(R.drawable.ic_baseline_texture_24)
-            .error(R.drawable.ic_baseline_not_interested_24)
-            .fallback(R.drawable.ic_baseline_texture_24)
+            .placeholder(R.drawable.time_124px)
+            .error(R.drawable.no_image_124px)
+            .fallback(R.drawable.time_124px)
             .into(imageView)
 
 
@@ -100,8 +103,8 @@ class EventDetailsActivity : AppCompatActivity(), View.OnClickListener {
 
         dialog_checkin.button_confirmar.setOnClickListener() {
 
-            var nome =dialog_checkin.edit_nome.text.toString();
-            var email = dialog_checkin.edit_email.text.toString()
+            val nome =dialog_checkin.edit_nome.text.toString()
+            val email = dialog_checkin.edit_email.text.toString()
 
             if (nome == "") {
                 dialog_checkin.edit_nome.setError("Campo obrigatório!")
@@ -114,7 +117,7 @@ class EventDetailsActivity : AppCompatActivity(), View.OnClickListener {
                     dialog_checkin.edit_email.setError("Insira um e-mail válido!")
                 } else {
                     //processar
-                    var checkin = CheckinModel(nome, email, evento.id)
+                    val checkin = CheckinModel()
                     viewModel.doCheckin(checkin, applicationContext)
                 }
             }

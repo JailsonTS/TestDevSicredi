@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        viewModel.eventList.observe(this, Observer {
+
+        viewModel.eventList.observe(this, {
             val adapter = EventAdapter(it)
             rview_main.adapter = adapter
             rview_main.layoutManager = LinearLayoutManager(this)

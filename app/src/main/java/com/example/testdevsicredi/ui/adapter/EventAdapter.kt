@@ -29,14 +29,15 @@ class EventAdapter(private val eventList: List<EventModel>) : RecyclerView.Adapt
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         val item = eventList[position]
 
-        var context = holder.itemView.context;
+        val context = holder.itemView.context
 
+        //isolar em fun para carregar imagem
         Glide.with(context)
             .load(item.urlImage)
             .centerCrop()
-            .placeholder(R.drawable.ic_baseline_texture_24)
-            .error(R.drawable.ic_baseline_not_interested_24)
-            .fallback(R.drawable.ic_baseline_texture_24)
+            .placeholder(R.drawable.time_124px)
+            .error(R.drawable.no_image_124px)
+            .fallback(R.drawable.time_124px)
             .into(holder.imageView)
 
         val formatter = java.text.SimpleDateFormat("dd/MM/yyyy HH:mm")
