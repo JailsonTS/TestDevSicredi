@@ -32,7 +32,11 @@ class EventRepository(context: Context) : BaseRepository(context) {
             ) {
                 val code = response.code()
                 if (fail(code)) {
-                    listener.onFailure(failRespose(response.errorBody()!!.string()))
+                    response.errorBody()?.string()?.let { failRespose(it) }?.let {
+                        listener.onFailure(
+                            it
+                        )
+                    }
                 } else {
                     response.body()?.let { listener.onSuccess(it, code) }
                 }

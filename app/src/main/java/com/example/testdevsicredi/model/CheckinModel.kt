@@ -1,16 +1,8 @@
 package com.example.testdevsicredi.model
 
-import com.google.gson.annotations.SerializedName
 
-class CheckinModel {
+class CheckinModel(nome: String, email: String, id: Int) {
 
-    @SerializedName("eventId")
-    var eventId = 0
 
-    @SerializedName("name")
-    var name: String? = null
-
-    @SerializedName("email")
-    var email: String? = null
 
 }

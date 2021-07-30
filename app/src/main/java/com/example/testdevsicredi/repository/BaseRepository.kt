@@ -7,6 +7,7 @@ import android.os.Build
 import com.example.testdevsicredi.constants.TaskConstants
 import com.google.gson.Gson
 
+
 open class BaseRepository (context: Context) {
 
     val mContext: Context = context
