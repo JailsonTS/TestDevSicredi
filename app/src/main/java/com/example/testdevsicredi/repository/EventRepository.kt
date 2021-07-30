@@ -11,7 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EventsRepository(context: Context) : BaseRepository(context) {
+class EventRepository(context: Context) : BaseRepository(context) {
 
     private val mRemote = RetrofitClient.createService(EventsService::class.java)
 

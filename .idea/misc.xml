@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/bordas.xml" value="0.2703125" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/bordas_edt.xml" value="0.2703125" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_map_24.xml" value="0.2703125" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/drawable/ic_baseline_not_interested_24.xml" value="0.2703125" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
-        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/card_item_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/card_item_list.xml" value="0.6" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/dialog_error.xml" value="0.25416666666666665" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/dialog_loading.xml" value="0.25416666666666665" />
+        <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/fragment_item_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/fragment_item_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/fragment_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Estudos/DBC/TestDevSicredi/app/src/main/res/layout/item_details.xml" value="0.2" />

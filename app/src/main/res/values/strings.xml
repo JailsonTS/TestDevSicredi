@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TestDevSicredi</string>
+    <string name="app_name">NewsLetter Sicredi</string>
     <string name="dbName">databasedevsicredi</string>
     <string name="servicePrefix">http://5f5a8f24d44d640016169133.mockapi.io/api/</string>
     <!-- TODO: Remove or change this placeholder text -->

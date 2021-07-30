@@ -2,53 +2,47 @@ package com.example.testdevsicredi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.testdevsicredi.listener.APIListener
-import com.example.testdevsicredi.repository.remote.RetrofitClient
-import com.example.testdevsicredi.repository.remote.EventsService
 import com.example.testdevsicredi.model.EventModel
-import com.example.testdevsicredi.repository.EventsRepository
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import com.example.testdevsicredi.repository.EventRepository
+import com.example.testdevsicredi.ui.adapter.EventAdapter
+import com.example.testdevsicredi.ui.viewModel.MainViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val mEventsRepository = EventsRepository(this)
+    //val mEventsRepository = EventRepository(this)
+
+    private val mEventList = MutableLiveData<List<EventModel>>()
+    val eventList: LiveData<List<EventModel>> = mEventList
+
+    private lateinit var viewModel: MainViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel.eventList.observe(this, Observer {
+            Log.i("log01", it.get(0).description.toString())
 
-        /* //Criação direta
-        val service = RetrofitClient.createService(EventsService::class.java)
-        val call: Call<List<EventModel>> = service.getEvents()
-        val response = call.enqueue(object : Callback<List<EventModel>> {
-            override fun onFailure(call: Call<List<EventModel>>, t: Throwable) {
-               val s = t.message
-            }
-            override fun onResponse(call: Call<List<EventModel>>, response: Response<List<EventModel>>) {
-                val s = response.body()
-            }
-        })
-        */
-
-        mEventsRepository.getEvents(object  : APIListener<EventModel> {
-            override fun onSuccess(result: EventModel, statusCode: Int) {
-                Toast.makeText(applicationContext, "EM PROCESSO 1", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onFailure(message: String) {
-                Toast.makeText(applicationContext, "EM PROCESSO 2", Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onSuccess(result: List<EventModel>, statusCode: Int) {
-                Toast.makeText(applicationContext, "EM PROCESSO 3", Toast.LENGTH_SHORT).show()
-            }
-
+            val adapter = EventAdapter(it)
+            rview_main.adapter = adapter
+            rview_main.layoutManager = LinearLayoutManager(this)
         })
 
 
     }
+
+
+
 }
